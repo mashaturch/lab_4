@@ -14,7 +14,6 @@ public class Account {
     private String password;
     private boolean blocked;
 
-    private int count = 0;
     public Account() {}
 
     public Account (String fio, String dateBirth, String email, String password) {
@@ -23,7 +22,6 @@ public class Account {
         this.email = email;
         this.password = password;
         this.blocked = false;
-        this.count = 0;
     }
 
     public Account (String fio, String dateBirth, String email, String password, boolean blocked) {
@@ -32,7 +30,6 @@ public class Account {
         this.email = email;
         this.password = password;
         this.blocked = false;
-        this.count = 0;
     }
 
     public String getFio(){
@@ -54,16 +51,6 @@ public class Account {
     public boolean getBlocked(){
         return blocked;
     }
-
-    public int getCount() {
-        return count;
-    }
-
-    public void setCount(Integer count) { this.count = count; }
-
-    public void unCorrectLogin () { this.count++; }
-
-    public void correctLogin(Integer zero) { this.count = zero; }
 
     @Override
     public String toString (){
