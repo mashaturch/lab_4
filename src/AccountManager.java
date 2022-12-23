@@ -8,7 +8,11 @@ public interface AccountManager {
      * выбрасывает ошибку AccountAlreadyExistsException
      */
 
+    void register(Account newAccount) throws AccountAlreadyExistsException;
 
+    Account login(String email, String password) throws AccountBlockedException, WrongCredentialsException;
+
+    void removeAccount(String email, String password) throws WrongCredentialsException;
 
 
 }
