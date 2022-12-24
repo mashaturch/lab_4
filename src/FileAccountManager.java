@@ -2,7 +2,6 @@ import java.util.List;
 
 public class FileAccountManager implements AccountManager{
 
-
     @Override
     public void register(Account newAccount) throws AccountAlreadyExistsException {
         /**

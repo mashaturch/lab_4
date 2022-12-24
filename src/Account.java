@@ -39,6 +39,9 @@ public class Account {
         return fio;
     }
 
+    public void setFIO(String fio) {
+        this.fio = fio;
+    }
     public String getDateBirth(){
         return dateBirth;
     }

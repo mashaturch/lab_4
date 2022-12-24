@@ -1,9 +1,12 @@
+import java.io.IOException;
+
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         FileAccountManager file = new FileAccountManager();
 
         //Регистрация нового аккаунта.
-        Account account1 = new Account("Мария Александровна Турчинович", "05.06.2002", "mashaturch@gmail.com", "1234");
+        Account account1 = new Account("Мария Александровна Турчинович", "05.06.2002",
+                "mashaturch@gmail.com", "1234");
         try {
             file.register(account1);
         } catch (AccountAlreadyExistsException e) {
@@ -15,8 +18,7 @@ public class Main {
         //Проверка метода FailedLoginCounter
         for (int i = 0; i < 5; i++) {
             try {
-                System.out.println(file.login("mashat@gmail.com", "12345"));
-                System.out.println(account1.getCount());
+                System.out.println(file.login("mashaturch@gmail.com", "12345"));
 
             } catch (AccountBlockedException | WrongCredentialsException e) {
                 System.out.println(e.getMessage());
