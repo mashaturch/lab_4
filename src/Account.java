@@ -59,8 +59,6 @@ public class Account {
         return count;
     }
 
-    public void setCount(Integer count) { this.count = count; }
-
     public void unCorrectLogin () { this.count++; }
 
     public void correctLogin(Integer zero) { this.count = zero; }
