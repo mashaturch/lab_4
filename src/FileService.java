@@ -11,6 +11,10 @@ public class FileService {
     private FileService(){}
 
     public static synchronized FileService getInstance() {
+        /*
+        Создание или открытие файла
+         */
+
         if (instance == null) {
             instance = new FileService();
         }
@@ -29,6 +33,10 @@ public class FileService {
 
 
     public List<Account> readFile() {
+        /*
+        В этом классе читаются данные из файла
+         */
+
         FileReader reader = null;
         List<Account> accounts = new ArrayList<>();
 
@@ -60,6 +68,10 @@ public class FileService {
     }
 
     public void writeInFile(String data, boolean append){
+        /*
+        В этой функции пишутся новые данные в файле
+         */
+
         FileWriter writer = null;
 
         try {
